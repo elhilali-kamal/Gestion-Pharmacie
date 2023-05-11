@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pharmacyModelStoreContainer" CdmEntityContainer="pharmacyEntities2">
+    <EntitySetMapping Name="logins">
+      <EntityTypeMapping TypeName="pharmacyModel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="permission" ColumnName="permission" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="communities">
+      <EntityTypeMapping TypeName="pharmacyModel.community">
+        <MappingFragment StoreEntitySet="community">
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="reportCounter" ColumnName="reportCounter" />
+          <ScalarProperty Name="likes" ColumnName="likes" />
+          <ScalarProperty Name="publshDate" ColumnName="publshDate" />
+          <ScalarProperty Name="clientid" ColumnName="clientid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
