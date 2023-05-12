@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E090E7D-0D5B-401C-8642-40000B17FC75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projet_Control_2</RootNamespace>
+    <AssemblyName>Projet Control 2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\Downloads\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addClient.Designer.cs">
+      <DependentUpon>addClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addMedicine.Designer.cs">
+      <DependentUpon>addMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addSupplier.Designer.cs">
+      <DependentUpon>addSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartObj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartObj.Designer.cs">
+      <DependentUpon>CartObj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetSupplier.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSupplier.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierForm.Designer.cs">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="community.cs">
+      <DependentUpon>EntittyCommunity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommunityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommunityForm.Designer.cs">
+      <DependentUpon>CommunityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contact.Designer.cs">
+      <DependentUpon>contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntittyCommunity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntittyCommunity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntittyCommunity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntittyCommunity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntittyCommunity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntittyCommunity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeClient.Designer.cs">
+      <DependentUpon>HomeClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <DependentUpon>EntittyCommunity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="medicines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medicines.Designer.cs">
+      <DependentUpon>medicines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="medicineObj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medicineObj.Designer.cs">
+      <DependentUpon>medicineObj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="message.Designer.cs">
+      <DependentUpon>message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orderClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderClient.Designer.cs">
+      <DependentUpon>orderClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orders.Designer.cs">
+      <DependentUpon>orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orderDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderDetailsForm.Designer.cs">
+      <DependentUpon>orderDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orderObj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderObj.Designer.cs">
+      <DependentUpon>orderObj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OvalPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="pharmacy.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacy.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacyDataSet.cs">
+      <DependentUpon>pharmacyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rapport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rapport.Designer.cs">
+      <DependentUpon>Rapport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comment.Designer.cs">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setting.Designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addClient.resx">
+      <DependentUpon>addClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addMedicine.resx">
+      <DependentUpon>addMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addSupplier.resx">
+      <DependentUpon>addSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartObj.resx">
+      <DependentUpon>CartObj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierForm.resx">
+      <DependentUpon>SupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommunityForm.resx">
+      <DependentUpon>CommunityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contact.resx">
+      <DependentUpon>contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeClient.resx">
+      <DependentUpon>HomeClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medicines.resx">
+      <DependentUpon>medicines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medicineObj.resx">
+      <DependentUpon>medicineObj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="message.resx">
+      <DependentUpon>message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderClient.resx">
+      <DependentUpon>orderClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orders.resx">
+      <DependentUpon>orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderDetailsForm.resx">
+      <DependentUpon>orderDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderObj.resx">
+      <DependentUpon>orderObj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rapport.resx">
+      <DependentUpon>Rapport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comment.resx">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="ReportOrder.rdlc" />
+    <EmbeddedResource Include="setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="EntittyCommunity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntittyCommunity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataSetSupplier.xsc">
+      <DependentUpon>DataSetSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSupplier.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSupplier.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetSupplier.xss">
+      <DependentUpon>DataSetSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="EntittyCommunity.edmx.diagram">
+      <DependentUpon>EntittyCommunity.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="pharmacy.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>pharmacy.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacy.dbml.layout">
+      <DependentUpon>pharmacy.dbml</DependentUpon>
+    </None>
+    <None Include="pharmacyDataSet.xsc">
+      <DependentUpon>pharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyDataSet.xss">
+      <DependentUpon>pharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Projet_Control_2.pharmacyDataSetTableAdapters.clientTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Projet_Control_2.pharmacyDataSetTableAdapters.medicineTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Projet_Control_2.pharmacyDataSetTableAdapters.ordersTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Projet_Control_2.pharmacyDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Projet_Control_2.pharmacyDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v870-tang-30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_2560255.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit meuve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kindpng_1667876.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_25602551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eye green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Not Eye green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimaze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimaze1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v870-tang-34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\600px-Whatsapp_logo_svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-logo-png-transparent-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gmail-logo-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v870-mynt-14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PikPng.com_green-border-png_1388680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daco_1353271.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-green-cross-health-hospital-medical-symbol-new-plus-icon-34280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Med default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spin-1s-200px.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writing-pencil-pngrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-224874.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Like Green.png" />
+    <None Include="Resources\Like Grey.png" />
+    <None Include="Resources\start.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\cart.png" />
+    <None Include="Resources\cart1.png" />
+    <None Include="Resources\cart2.png" />
+    <None Include="Resources\minus-2-128.png" />
+    <None Include="Resources\plus-128.png" />
+    <None Include="Resources\plus-8-128.png" />
+    <None Include="Resources\minus-2-128 %281%29.png" />
+    <None Include="Resources\medicine add 2.png" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\add 3.png" />
+    <Content Include="EntittyCommunity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntittyCommunity.edmx</DependentUpon>
+      <LastGenOutput>EntittyCommunity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntittyCommunity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntittyCommunity.edmx</DependentUpon>
+      <LastGenOutput>EntittyCommunity.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\add supplier.jpg" />
+    <None Include="Resources\heart 2.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
